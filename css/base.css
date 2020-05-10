@@ -9,4 +9,19 @@ code {
     outline: solid rgba(0, 0, 0, 0.07) .4em;
     margin: 0 .2em;
     color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+a.button {
+    background: #c24;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: .5em;
+    margin: .5em;
+}
+
+a.button:hover,
+a.button:active {
+    opacity: .8;
 }
