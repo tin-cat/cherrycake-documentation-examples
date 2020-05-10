@@ -20,7 +20,7 @@ class HelloWorld extends \Cherrycake\Module {
     public static function mapActions() {
         global $e;
         $e->Actions->mapAction(
-            "home",
+            "helloWorld",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "HelloWorld",

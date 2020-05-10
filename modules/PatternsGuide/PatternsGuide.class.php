@@ -10,9 +10,10 @@ class PatternsGuide extends \Cherrycake\Module {
     ];
 
     public static function mapActions() {
-        global $e;        
+        global $e; 
+
         $e->Actions->mapAction(
-            "testHome",
+            "passingVariables",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "PatternsGuide",
@@ -27,14 +28,47 @@ class PatternsGuide extends \Cherrycake\Module {
                             "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
                             "string" => "passing-variables"
                         ])
-                    ],
-                    "parameters" => [
-                        new \Cherrycake\RequestParameter([
-                            "name" => "id",
-                            "type" => \Cherrycake\REQUEST_PARAMETER_TYPE_GET,
-                            "securityRules" => [
-                                \Cherrycake\SECURITY_RULE_TYPICAL_ID
-                            ]
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "nestedPatterns",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "PatternsGuide",
+                "methodName" => "nestedPatterns",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "patterns-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "nested-patterns"
+                        ])
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "cachedPatterns",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "PatternsGuide",
+                "methodName" => "cachedPatterns",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "patterns-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "cached-patterns"
                         ])
                     ]
                 ])
@@ -49,5 +83,19 @@ class PatternsGuide extends \Cherrycake\Module {
                 "emoji" => "🧸"
             ]
         ]);
+    }
+
+    function nestedPatterns() {
+        global $e;
+        $e->Patterns->out("PatternsGuide/NestedPatterns.html", [
+            "variables" => [
+                "emoji" => "🧁"
+            ]
+        ]);
+    }
+
+    function cachedPatterns() {
+        global $e;
+        $e->Patterns->out("PatternsGuide/CachedPattern.html");
     }
 }
