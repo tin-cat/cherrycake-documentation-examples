@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tin-cat/cherrycake-engine": "dev-master"
+    }
+}
