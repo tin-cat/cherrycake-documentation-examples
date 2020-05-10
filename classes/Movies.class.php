@@ -9,6 +9,7 @@ class Movies extends \Cherrycake\Items {
     function fillFromParameters($p = false) {
         // Treat parameters
         self::treatParameters($p, [
+            "year" => ["default" => false],
             "releasedWhenDirectorWasYoungerThan" => [
                 "default" => false
             ],
@@ -21,6 +22,18 @@ class Movies extends \Cherrycake\Items {
         ]);
         
         // Modify $p accordingly
+        if ($p["year"]) {
+            $p["wheres"][] = [
+                "sqlPart" => "movies.year = ?",
+                "values" => [
+                    [
+                        "type" => \Cherrycake\DATABASE_FIELD_TYPE_INTEGER,
+                        "value" => $p["year"]
+                    ]
+                ]
+            ];
+        }
+        
         if ($p["releasedWhenDirectorWasYoungerThan"]) {
             $p["tables"][] = "directors";
             $p["wheres"][] = ["sqlPart" => "directors.id = movies.directorId"];

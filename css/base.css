@@ -1,0 +1,12 @@
+body {
+    background: #eee;
+    font-family: Inconsolata, Courier;
+    padding: 30pt;
+}
+
+code {
+    background: rgba(0, 0, 0, 0.07);
+    outline: solid rgba(0, 0, 0, 0.07) .4em;
+    margin: 0 .2em;
+    color: rgba(0, 0, 0, 0.7);
+}

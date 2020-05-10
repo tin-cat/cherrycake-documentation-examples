@@ -94,6 +94,111 @@ class ItemsGuide extends \Cherrycake\Module {
                 ])
             ])
         );
+
+        $e->Actions->mapAction(
+            "itemsGuideCustomFilters",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "ItemsGuide",
+                "methodName" => "customFilters",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "items-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "custom-filters"
+                        ])
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "itemsGuideCustomOrdering",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "ItemsGuide",
+                "methodName" => "customOrdering",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "items-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "custom-ordering"
+                        ])
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "itemsGuideFiltersAndOrdering",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "ItemsGuide",
+                "methodName" => "filtersAndOrdering",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "items-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "filters-and-ordering"
+                        ])
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "itemsGuideRelationships",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "ItemsGuide",
+                "methodName" => "relationships",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "items-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "relationships"
+                        ])
+                    ]
+                ])
+            ])
+        );
+
+        $e->Actions->mapAction(
+            "itemsGuideFiltersWithRelationships",
+            new \Cherrycake\ActionHtml([
+                "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
+                "moduleName" => "ItemsGuide",
+                "methodName" => "filtersWithRelationships",
+                "request" => new \Cherrycake\Request([
+                    "pathComponents" => [
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "items-guide"
+                        ]),
+                        new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "filters-with-relationships"
+                        ])
+                    ]
+                ])
+            ])
+        );
     }
 
     function basicUsage() {
@@ -163,5 +268,114 @@ class ItemsGuide extends \Cherrycake\Module {
                 "movies" => $movies
             ]
         ]);
+    }
+
+    function customFilters() {
+        global $e;
+
+        $movies = new Movies([
+            "fillMethod" => "fromParameters",
+            "p" => [
+                "year" => 1968
+            ]
+        ]);
+
+        $html = "";
+        foreach ($movies as $movie)
+            $html .= "{$movie->title} ({$movie->year})<br>";
+
+        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
+            "code" => \Cherrycake\RESPONSE_OK,
+            "payload" => "<html><body>$html</body></html>"
+        ]));
+    }
+
+    function customOrdering() {
+        global $e;
+
+        $movies = new Movies([
+            "fillMethod" => "fromParameters",
+            "p" => [
+                "order" => ["released"]
+            ]
+        ]);
+
+        $html = "";
+        foreach ($movies as $movie)
+            $html .= "{$movie->title} ({$movie->year})<br>";
+
+        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
+            "code" => \Cherrycake\RESPONSE_OK,
+            "payload" => "<html><body>$html</body></html>"
+        ]));
+    }
+
+    function filtersAndOrdering() {
+        global $e;
+
+        $movies = new Movies([
+            "fillMethod" => "fromParameters",
+            "p" => [
+                "minYear" => 1980,
+                "maxYear" => 1989,
+                "order" => ["released", "title"]
+            ]
+        ]);
+
+        $html = "";
+        foreach ($movies as $movie)
+            $html .= "{$movie->title} ({$movie->year})<br>";
+
+        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
+            "code" => \Cherrycake\RESPONSE_OK,
+            "payload" => "<html><body>$html</body></html>"
+        ]));
+    }
+
+    function relationships() {
+        global $e;
+
+        $movies = new Movies([
+            "fillMethod" => "fromParameters",
+            "p" => [
+                "limit" => 5,
+                "order" => ["random"]
+            ]
+        ]);
+
+        $html = "";
+        foreach ($movies as $movie)
+            $html .= "{$movie->title} directed by {$movie->getDirector()->name}<br>";
+
+        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
+            "code" => \Cherrycake\RESPONSE_OK,
+            "payload" => "<html><body>$html</body></html>"
+        ]));
+    }
+
+    function filtersWithRelationships() {
+        global $e;
+
+        $movies = new Movies([
+            "fillMethod" => "fromParameters",
+            "p" => [
+                "releasedWhenDirectorWasYoungerThan" => 35
+            ]
+        ]);
+
+        $html = "";
+        foreach ($movies as $movie)
+            $html .=
+                "\"{$movie->title}\"".
+                " directed by ".
+                $movie->getDirector()->name.
+                " at age ".
+                ($movie->year - $movie->getDirector()->birthYear).
+                "<br>";
+
+        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
+            "code" => \Cherrycake\RESPONSE_OK,
+            "payload" => "<html><body>$html</body></html>"
+        ]));
     }
 }
