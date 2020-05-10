@@ -3,20 +3,6 @@
 namespace CherrycakeApp;
 
 class HelloWorld extends \Cherrycake\Module {
-    protected $dependentCoreModules = [
-        "Database",
-        "HtmlDocument",
-        "Session"
-    ];
-
-    function init() {
-        if (!parent::init())
-            return false;
-        global $e;
-        $e->Css->addFileToSet("main", "main.css");
-        return true;
-    }
-    
     public static function mapActions() {
         global $e;
         $e->Actions->mapAction(

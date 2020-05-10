@@ -4,7 +4,6 @@ namespace CherrycakeApp;
 
 class Movie extends \Cherrycake\Item {
     protected $tableName = "movies";
-    protected $loadFromIdMethod = "queryDatabaseCache";
     protected $fields = [
         "id" => [
             "type" => \Cherrycake\DATABASE_FIELD_TYPE_INTEGER

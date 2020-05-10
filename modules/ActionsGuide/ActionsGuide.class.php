@@ -3,25 +3,11 @@
 namespace CherrycakeApp;
 
 class ActionsGuide extends \Cherrycake\Module {
-    protected $dependentCoreModules = [
-        "Database",
-        "HtmlDocument",
-        "Session"
-    ];
-
-    function init() {
-        if (!parent::init())
-            return false;
-        global $e;
-        $e->Css->addFileToSet("main", "main.css");
-        return true;
-    }
-    
     public static function mapActions() {
         global $e;
 
         $e->Actions->mapAction(
-            "variablePathComponents",
+            "actionsGuideVariablePathComponents",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "ActionsGuide",
@@ -51,7 +37,7 @@ class ActionsGuide extends \Cherrycake\Module {
         );
 
         $e->Actions->mapAction(
-            "acceptGetOrPostParameters",
+            "actionsGuideAcceptGetOrPostParameters",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "ActionsGuide",
@@ -81,7 +67,7 @@ class ActionsGuide extends \Cherrycake\Module {
         );
 
         $e->Actions->mapAction(
-            "cachedAction",
+            "actionsGuideCachedAction",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "ActionsGuide",

@@ -3,8 +3,6 @@
 namespace CherrycakeApp;
 
 class PatternsGuide extends \Cherrycake\Module {
-    protected $isConfigFile = true;
-
     protected $dependentCoreModules = [
         "Patterns"
     ];
@@ -13,7 +11,7 @@ class PatternsGuide extends \Cherrycake\Module {
         global $e; 
 
         $e->Actions->mapAction(
-            "passingVariables",
+            "patternsGuidePassingVariables",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "PatternsGuide",
@@ -34,7 +32,7 @@ class PatternsGuide extends \Cherrycake\Module {
         );
 
         $e->Actions->mapAction(
-            "nestedPatterns",
+            "patternsGuideNestedPatterns",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "PatternsGuide",
@@ -55,7 +53,7 @@ class PatternsGuide extends \Cherrycake\Module {
         );
 
         $e->Actions->mapAction(
-            "cachedPatterns",
+            "patternsGuideCachedPatterns",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
                 "moduleName" => "PatternsGuide",
