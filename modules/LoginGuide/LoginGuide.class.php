@@ -66,6 +66,16 @@ class LoginGuide extends \Cherrycake\Module {
                             "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
                             "string" => "do-login"
                         ])
+                    ],
+                    "parameters" => [
+                        new \Cherrycake\RequestParameter([
+                            "name" => "email",
+                            "type" => \Cherrycake\REQUEST_PARAMETER_TYPE_POST
+                        ]),
+                        new \Cherrycake\RequestParameter([
+                            "name" => "password",
+                            "type" => \Cherrycake\REQUEST_PARAMETER_TYPE_POST
+                        ])
                     ]
                 ]),
                 "isSensibleToBruteForceAttacks" => true
@@ -96,13 +106,13 @@ class LoginGuide extends \Cherrycake\Module {
 
     function home() {
         global $e;
-    
+
         $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
             "code" => \Cherrycake\RESPONSE_OK,
             "payload" =>
                 $e->HtmlDocument->header().
                 ($e->Login->isLogged() ?
-                    "You are logged in as".
+                    "You are logged in as {$e->Login->user->name}".
                     "<a href=\"{$e->Actions->getAction("loginGuideLogout")->request->buildUrl()}\" class=button>Logout</a>"
                 :
                     "You are not logged in".
@@ -149,5 +159,14 @@ class LoginGuide extends \Cherrycake\Module {
                 "url" => $e->Actions->getAction("loginGuideHome")->request->buildUrl()
             ]));
         }
+    }
+
+    function logout() {
+        global $e;
+        $e->Login->logoutUser();
+        $e->Output->setResponse(new \Cherrycake\Response([
+            "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,
+            "url" => $e->Actions->getAction("loginGuideHome")->request->buildUrl()
+        ]));
     }
 }
