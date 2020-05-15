@@ -2,7 +2,7 @@
 
 namespace CherrycakeApp;
 
-class CssAndJavascript extends \Cherrycake\Module {
+class CssAndJavascriptGuide extends \Cherrycake\Module {
     protected $dependentCoreModules = [
         "HtmlDocument"
     ];
@@ -14,7 +14,7 @@ class CssAndJavascript extends \Cherrycake\Module {
             "cssAndJavascriptBasicExample",
             new \Cherrycake\ActionHtml([
                 "moduleType" => \Cherrycake\ACTION_MODULE_TYPE_APP,
-                "moduleName" => "CssAndJavascript",
+                "moduleName" => "CssAndJavascriptGuide",
                 "methodName" => "basicExample",
                 "request" => new \Cherrycake\Request([
                     "pathComponents" => [
@@ -39,7 +39,7 @@ class CssAndJavascript extends \Cherrycake\Module {
             "code" => \Cherrycake\RESPONSE_OK,
             "payload" =>
                 $e->HtmlDocument->header().
-                "This page hase some CSS styling, the file base.css has been linked in the <code>Css.config.php</code> configuration file.".
+                "This page has some CSS styling, the file base.css has been linked in the <code>Css.config.php</code> configuration file.".
                 $e->HtmlDocument->footer()
         ]));
     }
