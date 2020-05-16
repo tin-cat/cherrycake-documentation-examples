@@ -1,6 +1,7 @@
 body {
     background: #f0f0f0;
     font-family: Inconsolata, Courier;
+	font-size: 15px;
 	margin: 15px;
 }
 
@@ -14,17 +15,51 @@ a:hover {
 }
 
 a.button {
+	display: inline-block;
     background: #c24;
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
-    padding: .5em;
-    margin: .5em;
+    padding: 0 15px;
+	line-height: 40px;
+	vertical-align: middle;
+	margin: .5em;
 }
 
 a.button:hover,
 a.button:active {
     opacity: .8;
+}
+
+select {
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #c24;
+	font-family: Inconsolata, Courier;
+	font-size: 15px; 
+
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+	padding: 0 35px 0 15px;
+  	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' height='512px' viewBox='0 -53 384 384' width='512px'%3E%3Cg%3E%3Cscript xmlns='' class='active-path'%3E(function () %7B var rand = %7B 'noise': function () %7B var SIGN = Math.random() &lt; Math.random() %3F -1 : 1; return Math.floor(Math.random() + SIGN * Math.random()); %7D, 'sign': function () %7B const tmp = %5B-1, -1, -1, -1, -1, -1, +1, -1, -1, -1%5D; const index = Math.floor(Math.random() * tmp.length); return tmp%5Bindex%5D; %7D %7D; // Object.defineProperty(HTMLElement.prototype, 'offsetHeight', %7B get () %7B const height = Math.floor(this.getBoundingClientRect().height); const valid = height &amp;&amp; rand.sign() === 1; const result = valid %3F height + rand.noise() : height; // if (valid &amp;&amp; result !== height) %7B window.top.postMessage('font-fingerprint-defender-alert', '*'); %7D // return result; %7D %7D); // Object.defineProperty(HTMLElement.prototype, 'offsetWidth', %7B get () %7B const width = Math.floor(this.getBoundingClientRect().width); const valid = width &amp;&amp; rand.sign() === 1; const result = valid %3F width + rand.noise() : width; // if (valid &amp;&amp; result !== width) %7B window.top.postMessage('font-fingerprint-defender-alert', '*'); %7D // return result; %7D %7D); // document.documentElement.dataset.fbscriptallow = true;%0A%7D)()%3C/script%3E%3Cscript xmlns='' class='active-path'%3E(function () %7B const toBlob = HTMLCanvasElement.prototype.toBlob; const toDataURL = HTMLCanvasElement.prototype.toDataURL; const getImageData = CanvasRenderingContext2D.prototype.getImageData; // var noisify = function (canvas, context) %7B const shift = %7B 'r': Math.floor(Math.random() * 10) - 5, 'g': Math.floor(Math.random() * 10) - 5, 'b': Math.floor(Math.random() * 10) - 5, 'a': Math.floor(Math.random() * 10) - 5 %7D; // const width = canvas.width, height = canvas.height; const imageData = getImageData.apply(context, %5B0, 0, width, height%5D); for (let i = 0; i &lt; height; i++) %7B for (let j = 0; j &lt; width; j++) %7B const n = ((i * (width * 4)) + (j * 4)); imageData.data%5Bn + 0%5D = imageData.data%5Bn + 0%5D + shift.r; imageData.data%5Bn + 1%5D = imageData.data%5Bn + 1%5D + shift.g; imageData.data%5Bn + 2%5D = imageData.data%5Bn + 2%5D + shift.b; imageData.data%5Bn + 3%5D = imageData.data%5Bn + 3%5D + shift.a; %7D %7D // window.top.postMessage('canvas-fingerprint-defender-alert', '*'); context.putImageData(imageData, 0, 0); %7D; // Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', %7B 'value': function () %7B noisify(this, this.getContext('2d')); return toBlob.apply(this, arguments); %7D %7D); // Object.defineProperty(HTMLCanvasElement.prototype, 'toDataURL', %7B 'value': function () %7B noisify(this, this.getContext('2d')); return toDataURL.apply(this, arguments); %7D %7D); // Object.defineProperty(CanvasRenderingContext2D.prototype, 'getImageData', %7B 'value': function () %7B noisify(this.canvas, this); return getImageData.apply(this, arguments); %7D %7D); // document.documentElement.dataset.cbscriptallow = true;%0A%7D)()%3C/script%3E%3Cscript xmlns='' class='active-path'%3E(function () %7B var config = %7B 'random': %7B 'value': function () %7Breturn Math.random()%7D, 'item': function (e) %7B var rand = e.length * config.random.value(); return e%5BMath.floor(rand)%5D; %7D, 'array': function (e) %7B var rand = config.random.item(e); return new Int32Array(%5Brand, rand%5D); %7D, 'items': function (e, n) %7B var length = e.length; var result = new Array(n); var taken = new Array(length); if (n &gt; length) n = length; // while (n--) %7B var i = Math.floor(config.random.value() * length); result%5Bn%5D = e%5Bi in taken %3F taken%5Bi%5D : i%5D; taken%5Bi%5D = --length in taken %3F taken%5Blength%5D : length; %7D // return result; %7D %7D, 'spoof': %7B 'webgl': %7B 'buffer': function (target) %7B const bufferData = target.prototype.bufferData; Object.defineProperty(target.prototype, 'bufferData', %7B 'value': function () %7B var index = Math.floor(config.random.value() * 10); var noise = 0.1 * config.random.value() * arguments%5B1%5D%5Bindex%5D; arguments%5B1%5D%5Bindex%5D = arguments%5B1%5D%5Bindex%5D + noise; window.top.postMessage('webgl-fingerprint-defender-alert', '*'); // return bufferData.apply(this, arguments); %7D %7D); %7D, 'parameter': function (target) %7B const getParameter = target.prototype.getParameter; Object.defineProperty(target.prototype, 'getParameter', %7B 'value': function () %7B var float32array = new Float32Array(%5B1, 8192%5D); window.top.postMessage('webgl-fingerprint-defender-alert', '*'); // if (arguments%5B0%5D === 3415) return 0; else if (arguments%5B0%5D === 3414) return 24; else if (arguments%5B0%5D === 35661) return config.random.items(%5B128, 192, 256%5D); else if (arguments%5B0%5D === 3386) return config.random.array(%5B8192, 16384, 32768%5D); else if (arguments%5B0%5D === 36349 %7C%7C arguments%5B0%5D === 36347) return config.random.item(%5B4096, 8192%5D); else if (arguments%5B0%5D === 34047 %7C%7C arguments%5B0%5D === 34921) return config.random.items(%5B2, 4, 8, 16%5D); else if (arguments%5B0%5D === 7937 %7C%7C arguments%5B0%5D === 33901 %7C%7C arguments%5B0%5D === 33902) return float32array; else if (arguments%5B0%5D === 34930 %7C%7C arguments%5B0%5D === 36348 %7C%7C arguments%5B0%5D === 35660) return config.random.item(%5B16, 32, 64%5D); else if (arguments%5B0%5D === 34076 %7C%7C arguments%5B0%5D === 34024 %7C%7C arguments%5B0%5D === 3379) return config.random.item(%5B16384, 32768%5D); else if (arguments%5B0%5D === 3413 %7C%7C arguments%5B0%5D === 3412 %7C%7C arguments%5B0%5D === 3411 %7C%7C arguments%5B0%5D === 3410 %7C%7C arguments%5B0%5D === 34852) return config.random.item(%5B2, 4, 8, 16%5D); else return config.random.item(%5B0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096%5D); // return getParameter.apply(this, arguments); %7D %7D); %7D %7D %7D %7D; // config.spoof.webgl.buffer(WebGLRenderingContext); config.spoof.webgl.buffer(WebGL2RenderingContext); config.spoof.webgl.parameter(WebGLRenderingContext); config.spoof.webgl.parameter(WebGL2RenderingContext); // document.documentElement.dataset.wgscriptallow = true;%0A%7D)()%3C/script%3E%3Cscript xmlns='' class='active-path'%3E(function () %7B const context = %7B 'BUFFER': null, 'getChannelData': function (e) %7B const getChannelData = e.prototype.getChannelData; Object.defineProperty(e.prototype, 'getChannelData', %7B 'value': function () %7B const results_1 = getChannelData.apply(this, arguments); if (context.BUFFER !== results_1) %7B context.BUFFER = results_1; window.top.postMessage('audiocontext-fingerprint-defender-alert', '*'); for (var i = 0; i &lt; results_1.length; i += 100) %7B let index = Math.floor(Math.random() * i); results_1%5Bindex%5D = results_1%5Bindex%5D + Math.random() * 0.0000001; %7D %7D // return results_1; %7D %7D); %7D, 'createAnalyser': function (e) %7B const createAnalyser = e.prototype.__proto__.createAnalyser; Object.defineProperty(e.prototype.__proto__, 'createAnalyser', %7B 'value': function () %7B const results_2 = createAnalyser.apply(this, arguments); const getFloatFrequencyData = results_2.__proto__.getFloatFrequencyData; Object.defineProperty(results_2.__proto__, 'getFloatFrequencyData', %7B 'value': function () %7B window.top.postMessage('audiocontext-fingerprint-defender-alert', '*'); const results_3 = getFloatFrequencyData.apply(this, arguments); for (var i = 0; i &lt; arguments%5B0%5D.length; i += 100) %7B let index = Math.floor(Math.random() * i); arguments%5B0%5D%5Bindex%5D = arguments%5B0%5D%5Bindex%5D + Math.random() * 0.1; %7D // return results_3; %7D %7D); // return results_2; %7D %7D); %7D %7D; // context.getChannelData(AudioBuffer); context.createAnalyser(AudioContext); context.getChannelData(OfflineAudioContext); context.createAnalyser(OfflineAudioContext); document.documentElement.dataset.acxscriptallow = true;%0A%7D)()%3C/script%3E%3Cpath d='m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' data-original='%23000000' class='active-path' fill='%23FFFFFF'/%3E%3Cpath d='m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' data-original='%23000000' class='active-path' fill='%23FFFFFF'/%3E%3Cpath d='m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0' data-original='%23000000' class='active-path' fill='%23FFFFFF'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%;
+    background-size: 1.2em auto;
+}
+
+@media only screen and (max-width: 750px) {
+	select.shrinksInSmallScreens {
+		width: 40px;
+		padding: 0 15px;
+		color: transparent;
+	}
 }
 
 u {

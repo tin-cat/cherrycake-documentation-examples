@@ -50,10 +50,6 @@ class ExamplesBrowser extends \Cherrycake\Module {
                 "request" => new \Cherrycake\Request([
 					"pathComponents" => [
                         new \Cherrycake\RequestPathComponent([
-                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
-                            "string" => "example"
-                        ]),
-                        new \Cherrycake\RequestPathComponent([
                             "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_VARIABLE_STRING,
                             "name" => "example",
                             "securityRules" => [
@@ -69,29 +65,13 @@ class ExamplesBrowser extends \Cherrycake\Module {
     function home() {
         global $e;
 
-		$html = "<ul class=\"examples\">";
-		foreach ($this->getConfig("examples") as $actionName => $example) {
-			$html .=
-				"<li>".
-					"<a href=\"".
-						$e->Actions->getAction("examplesBrowserView")->request->buildUrl([
-							"parameterValues" => [
-								"example" => $actionName
-							]
-						]).
-					"\">".
-						$example["title"].
-					"</a>".
-				"</li>";
-		}
-		$html .= "</ul>";
-        
-        $e->Output->setResponse(new \Cherrycake\ResponseTextHtml([
-            "code" => \Cherrycake\RESPONSE_OK,
-            "payload" => 
-				$e->HtmlDocument->header().
-				$html.
-				$e->HtmlDocument->footer()
+		$e->Output->setResponse(new \Cherrycake\Response([
+            "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,
+            "url" => $e->Actions->getAction("examplesBrowserView")->request->buildUrl([
+				"parameterValues" => [
+					"example" => array_keys($this->getConfig("examples"))[0]
+				]
+			])
         ]));
     }
 
@@ -121,12 +101,36 @@ class ExamplesBrowser extends \Cherrycake\Module {
 
 	function buildExample($p) {
 		global $e;
+	
+		$selectOptions = "";
+		foreach ($this->getConfig("examples") as $key => $example) {
+			$selectOptions .=
+				"<option".
+					($p["title"] == $example["title"] ? " selected" : null).
+					" value=\"".
+						$e->Actions->getAction("examplesBrowserView")->request->buildUrl([
+							"parameterValues" => [
+								"example" => $key
+							]
+						]).
+					"\"".
+				">".
+					$example["title"].
+				"</option>";
+		}
+
 		return
 			"<div id=\"exampleHeader\">".
-				"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
-				"<div class=\"text\">".
-					"<div class=\"title\"><a href=\"https://cherrycake.io\">Cherrycake documentation examples</a></div>".
-					"<div class=\"subTitle\">".$p["title"]."</div>".
+				"<div class=\"left\">".
+					"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
+					"<div class=\"text\">".
+						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake</a>".
+						"<div class=\"subTitle\">Documentation examples</div>".
+					"</div>".
+				"</div>".
+				"<div class=\"right\">".
+					"<a href=\"https://cherrycake.io\" class=\"button\">Documentation</a>".
+					"<select onchange=\"document.location=this.value;\" class=\"shrinksInSmallScreens\">".$selectOptions."</select>".
 				"</div>".
 			"</div>".
 			"<div id=\"example\">".
