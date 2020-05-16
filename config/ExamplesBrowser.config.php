@@ -467,8 +467,17 @@ $ExamplesBrowserConfig = [
 					]
 				],
 				[
-					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
-					"actionName" => "itemsGuideRelationships"
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "classes/Director.class.php"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+							"actionName" => "itemsGuideRelationships"
+						]		
+					]
 				]
 			]
 		],
@@ -496,8 +505,17 @@ $ExamplesBrowserConfig = [
 					]
 				],
 				[
-					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
-					"actionName" => "itemsGuideFiltersWithRelationships"
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "classes/Director.class.php"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+							"actionName" => "itemsGuideFiltersWithRelationships"
+						]		
+					]
 				]
 			]
 		],

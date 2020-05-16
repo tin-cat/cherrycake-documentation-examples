@@ -135,7 +135,7 @@ class ExamplesBrowser extends \Cherrycake\Module {
 				"</div>".
 				"<div class=\"right\">".
 					"<a href=\"https://cherrycake.io\">Documentation</a>".
-					"<a href=\"https://github.com/tin-cat/cherrycake-documentation-examples\">GitHub</a>".
+					"<a href=\"https://github.com/tin-cat/cherrycake-documentation-examples\">Download</a>".
 					"<select onchange=\"document.location=this.value;\" class=\"shrinksInSmallScreens\">".$selectOptions."</select>".
 				"</div>".
 			"</div>".
