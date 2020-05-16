@@ -50,6 +50,10 @@ class ExamplesBrowser extends \Cherrycake\Module {
                 "methodName" => "view",
                 "request" => new \Cherrycake\Request([
 					"pathComponents" => [
+						new \Cherrycake\RequestPathComponent([
+                            "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_FIXED,
+                            "string" => "example"
+                        ]),
                         new \Cherrycake\RequestPathComponent([
                             "type" => \Cherrycake\REQUEST_PATH_COMPONENT_TYPE_VARIABLE_STRING,
                             "name" => "example",
