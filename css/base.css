@@ -26,6 +26,11 @@ a.button {
 	margin: .5em;
 }
 
+a.button.grey {
+	background: #ddd;
+    color: #555;
+}
+
 a.button:hover,
 a.button:active {
     opacity: .8;
