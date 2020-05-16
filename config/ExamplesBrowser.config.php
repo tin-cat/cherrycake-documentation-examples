@@ -189,6 +189,11 @@ $ExamplesBrowserConfig = [
 					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php"
 				],
 				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movie.class.php"
+				],
+				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
 					"actionName" => "itemsGuideBasicUsage"
 				]
@@ -201,6 +206,16 @@ $ExamplesBrowserConfig = [
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
 					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movies.class.php"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movie.class.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
@@ -217,6 +232,16 @@ $ExamplesBrowserConfig = [
 					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php"
 				],
 				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movies.class.php"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movie.class.php"
+				],
+				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
 					"actionName" => "itemsGuideIterate"
 				]
@@ -229,6 +254,16 @@ $ExamplesBrowserConfig = [
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
 					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movies.class.php"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "classes/Movie.class.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,

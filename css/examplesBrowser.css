@@ -1,16 +1,12 @@
 #example {
-	position: fixed;
-	top: 60px; right: 0; bottom: 0; left: 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 	grid-gap: 30px;
-	padding: 0 30px 30px 30px;
+	padding: 5px 30px 30px 30px;
 	font-size: 10pt;
 }
 
 #exampleHeader {
-	position: fixed;
-	top: 0; left: 0; right: 0;
 	height: 60px;
 	display: flex;
 	justify-content: center;
@@ -42,15 +38,15 @@
 	background: #eee;
 	border-radius: 6px;
 	border: solid #888 4px;
+	min-height: 500px;
 }
 
 #example > div > .title {
 	position: absolute;
 	top: 0;	left: 0; right: 0;
 	padding: 5px;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.7);
 	font-size: 10pt;
-	font-weight: bold;
 }
 
 #example > div.iframe > iframe {
@@ -75,7 +71,7 @@
 	margin: 0;
 }
 
-#example > div.iframe { background: #ddd; border-color: #ddd; }
-#example > div.code.php { background: #4cf; border-color: #4cf; }
+#example > div.iframe { background: #ccc; border-color: #ccc; }
+#example > div.code.php { background: #37cfff; border-color: #37cfff; }
 #example > div.code.html { background: rgb(255, 152, 68); border-color: rgb(255, 152, 68); }
 #example > div.code.css { background: #fc4; border-color: #fc4; }
