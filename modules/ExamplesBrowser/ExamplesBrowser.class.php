@@ -129,8 +129,8 @@ class ExamplesBrowser extends \Cherrycake\Module {
 				"<div class=\"left\">".
 					"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
 					"<div class=\"text\">".
-						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake</a>".
-						"<div class=\"subTitle\">Documentation examples</div>".
+						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake documentation examples</a>".
+						"<div class=\"subTitle\">".$p["title"]."</div>".
 					"</div>".
 				"</div>".
 				"<div class=\"right\">".
