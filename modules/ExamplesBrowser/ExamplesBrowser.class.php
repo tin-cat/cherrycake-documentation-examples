@@ -120,11 +120,12 @@ class ExamplesBrowser extends \Cherrycake\Module {
 	}
 
 	function buildExample($p) {
+		global $e;
 		return
 			"<div id=\"exampleHeader\">".
 				"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
 				"<div class=\"text\">".
-					"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake.io</a>".
+					"<div class=\"title\"><a href=\"https://cherrycake.io\">Cherrycake documentation examples</a></div>".
 					"<div class=\"subTitle\">".$p["title"]."</div>".
 				"</div>".
 			"</div>".
@@ -163,7 +164,7 @@ class ExamplesBrowser extends \Cherrycake\Module {
 					EXAMPLESBROWSER_BLOCK_FILE_TYPE_JAVASCRIPT => "language-javascript"
 				][$block["fileType"]];
 				
-				$content = "<pre class=\"content\"><code class=\"".$codeClass."\">".htmlspecialchars(file_get_contents(APP_DIR."/".$block["fileName"]))."</code></pre>";
+				$content = "<pre class=\"line-numbers content\"".($block["lineHighlight"] ?? false ? " data-line=\"".$block["lineHighlight"]."\"" : null)."><code class=\"".$codeClass."\">".htmlentities(file_get_contents(APP_DIR."/".$block["fileName"]))."</code></pre>";
 
 				break;
 			case EXAMPLESBROWSER_BLOCK_IFRAME:

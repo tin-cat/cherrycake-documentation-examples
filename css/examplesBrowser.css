@@ -1,13 +1,4 @@
-#example {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-	grid-gap: 30px;
-	padding: 5px 30px 30px 30px;
-	font-size: 10pt;
-}
-
 #exampleHeader {
-	height: 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,12 +24,23 @@
 	line-height: 1em;
 }
 
+#example {
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 #example > div {
+	flex-grow: 1;
+	min-width: 450px;
 	position: relative;
 	background: #eee;
-	border-radius: 6px;
-	border: solid #888 4px;
-	min-height: 500px;
+	border: solid #888 5px;
+	min-height: 40em;
+	margin: 10px;
+	border-radius: 7px;
 }
 
 #example > div > .title {
@@ -62,13 +64,9 @@
 #example > div.code > pre.content {
 	position: absolute;
 	top: calc(1em + 15px);	left: 0; right: 0; bottom: 0;
-	overflow: auto;
-	white-space: pre;
-	font-family: Courier, monospace;
-	font-size: 8pt;
-	padding: 20px;
 	border-radius: 5px 5px 4px 4px;
 	margin: 0;
+	font-size: 11px;
 }
 
 #example > div.iframe { background: #ccc; border-color: #ccc; }
