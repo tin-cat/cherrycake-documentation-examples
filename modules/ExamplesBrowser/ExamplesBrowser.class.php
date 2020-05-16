@@ -120,7 +120,14 @@ class ExamplesBrowser extends \Cherrycake\Module {
 	}
 
 	function buildExample($p) {
-		return 
+		return
+			"<div id=\"exampleHeader\">".
+				"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
+				"<div class=\"text\">".
+					"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake.io</a>".
+					"<div class=\"subTitle\">".$p["title"]."</div>".
+				"</div>".
+			"</div>".
 			"<div id=\"example\">".
 				implode(array_map(function($block){
 					return $this->buildExampleBlock($block);
