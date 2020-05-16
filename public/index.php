@@ -7,7 +7,7 @@ require $_SERVER["HTTP_HOST"] == "localhost" ? "/engine/load.php" : "../vendor/t
 $e = new \Cherrycake\Engine;
 
 if ($e->init(__NAMESPACE__, [
-    "isDevel" => $_SERVER["HTTP_HOST"] == "localhost"
+    "isDevel" => true // $_SERVER["HTTP_HOST"] == "localhost"
 ]))
     $e->attendWebRequest();
 
