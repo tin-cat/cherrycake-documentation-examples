@@ -32,7 +32,7 @@
 	justify-content: center;
 }
 
-#example > div {
+#example .cell {
 	flex-grow: 1;
 	min-width: 450px;
 	position: relative;
@@ -43,7 +43,17 @@
 	border-radius: 7px;
 }
 
-#example > div > .title {
+#example > .verticalBlocks {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#example > .verticalBlocks > .cell {
+	min-height: 150px;
+}
+
+#example .cell > .title {
 	position: absolute;
 	top: 0;	left: 0; right: 0;
 	padding: 5px;
@@ -51,7 +61,7 @@
 	font-size: 10pt;
 }
 
-#example > div.iframe > iframe {
+#example .cell.iframe > iframe {
 	position: absolute;
 	top: calc(1em + 15px);	left: 0; right: 0; bottom: 0;
 	width: 100%;
@@ -61,7 +71,7 @@
 	border-radius: 5px 5px 4px 4px;
 }
 
-#example > div.code > pre.content {
+#example .cell.code > pre.content {
 	position: absolute;
 	top: calc(1em + 15px);	left: 0; right: 0; bottom: 0;
 	border-radius: 5px 5px 4px 4px;
@@ -69,7 +79,12 @@
 	font-size: 11px;
 }
 
-#example > div.iframe { background: #ccc; border-color: #ccc; }
-#example > div.code.php { background: #37cfff; border-color: #37cfff; }
-#example > div.code.html { background: rgb(255, 152, 68); border-color: rgb(255, 152, 68); }
-#example > div.code.css { background: #fc4; border-color: #fc4; }
+#example .cell.iframe { background: #ccc; border-color: #ccc; }
+#example .cell.code.php { background: #37cfff; border-color: #37cfff; }
+#example .cell.code.html { background: rgb(255, 152, 68); border-color: rgb(255, 152, 68); }
+#example .cell.code.css { background: #fc4; border-color: #fc4; }
+
+#example .cell.code > pre > .line-highlight {
+	background: hsla(24, 30%, 50%,.2);
+    background: linear-gradient(to right, hsla(24, 30%, 50%,.2) 70%, hsla(24, 20%, 50%,0));
+}

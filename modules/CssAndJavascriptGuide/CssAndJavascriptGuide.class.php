@@ -39,7 +39,7 @@ class CssAndJavascriptGuide extends \Cherrycake\Module {
             "code" => \Cherrycake\RESPONSE_OK,
             "payload" =>
                 $e->HtmlDocument->header().
-                "This page has some CSS styling, the file base.css has been linked in the <code>Css.config.php</code> configuration file.".
+                "This page has some CSS styling, the file base.css has been linked in the <u>Css.config.php</u> configuration file.".
                 $e->HtmlDocument->footer()
         ]));
     }

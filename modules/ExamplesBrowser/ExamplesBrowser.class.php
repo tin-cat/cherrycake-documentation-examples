@@ -138,6 +138,16 @@ class ExamplesBrowser extends \Cherrycake\Module {
 
 	function buildExampleBlock($block) {
 		global $e;
+
+		if ($block["verticalBlocks"] ?? false) {
+			return
+				"<div class=\"verticalBlocks\">".
+					implode(array_map(function($block){
+						return $this->buildExampleBlock($block);
+					}, $block["verticalBlocks"])).
+				"</div>";
+		}
+
 		switch ($block["type"]) {
 			case EXAMPLESBROWSER_BLOCK_FILE:
 
@@ -163,8 +173,29 @@ class ExamplesBrowser extends \Cherrycake\Module {
 					EXAMPLESBROWSER_BLOCK_FILE_TYPE_CSS => "language-css",
 					EXAMPLESBROWSER_BLOCK_FILE_TYPE_JAVASCRIPT => "language-javascript"
 				][$block["fileType"]];
+
+				$id = strtolower(str_replace([".", "/"], "-", $block["fileName"]));
 				
-				$content = "<pre class=\"line-numbers content\"".($block["lineHighlight"] ?? false ? " data-line=\"".$block["lineHighlight"]."\"" : null)."><code class=\"".$codeClass."\">".htmlentities(file_get_contents(APP_DIR."/".$block["fileName"]))."</code></pre>";
+				$content =
+					"<pre".
+						" id=\"".$id."\"".
+						" class=\"".
+							"line-numbers".
+							" linkable-line-numbers".
+							" content".
+						"\"".
+						($block["lineHighlight"] ?? false ? " data-line=\"".$block["lineHighlight"]."\"" : null).
+					">".
+						"<code".
+							" class=\"".
+								$codeClass.
+							"\"".
+						">".
+							htmlentities(
+								file_get_contents(APP_DIR."/".$block["fileName"])
+							).
+						"</code>".
+					"</pre>";
 
 				break;
 			case EXAMPLESBROWSER_BLOCK_IFRAME:
@@ -178,7 +209,7 @@ class ExamplesBrowser extends \Cherrycake\Module {
 				break;
 		}
 		return
-			"<div class=\"".$cssClass."\">".
+			"<div class=\"cell ".$cssClass."\">".
 				"<div class=\"title\">".
 					$title.
 				"</div>".
