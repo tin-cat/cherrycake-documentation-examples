@@ -15,7 +15,8 @@ class ExamplesBrowser extends \Cherrycake\Module {
 
 	protected $dependentCoreModules = [
 		"Errors",
-        "HtmlDocument"
+        "HtmlDocument",
+		"SystemLog"
     ];
 
 	function init() {
