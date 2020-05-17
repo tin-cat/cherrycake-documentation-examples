@@ -107,7 +107,21 @@ class ExamplesBrowser extends \Cherrycake\Module {
 	function buildExample($p) {
 		global $e;
 	
-		$selectOptions = "";
+		$selectOptions =
+			"<optgroup>".
+				"<option".
+					" value=\"https://cherrycake.io\"".
+				">".
+					"Cherrycake documentation".
+				"</option>".
+				"<option".
+					" value=\"https://github.com/tin-cat/cherrycake-documentation-examples\"".
+				">".
+					"Examples GitHub repository".
+				"</option>".
+			"</optgroup>".
+			"<optgroup>";
+		
 		foreach ($this->getConfig("examples") as $key => $example) {
 			$selectOptions .=
 				"<option".
@@ -123,20 +137,17 @@ class ExamplesBrowser extends \Cherrycake\Module {
 					$example["title"].
 				"</option>";
 		}
+		$selectOptions .= "</optgroup>";
 
 		return
 			"<div id=\"exampleHeader\">".
 				"<div class=\"left\">".
+					"<select onchange=\"document.location=this.value;\" class=\"mainMenu\">".$selectOptions."</select>".
 					"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
 					"<div class=\"text\">".
-						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake documentation examples</a>".
+						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake examples</a>".
 						"<div class=\"subTitle\">".$p["title"]."</div>".
 					"</div>".
-				"</div>".
-				"<div class=\"right\">".
-					"<a href=\"https://cherrycake.io\">Documentation</a>".
-					"<a href=\"https://github.com/tin-cat/cherrycake-documentation-examples\">Download</a>".
-					"<select onchange=\"document.location=this.value;\" class=\"shrinksInSmallScreens\">".$selectOptions."</select>".
 				"</div>".
 			"</div>".
 			"<div id=\"example\">".
