@@ -71,9 +71,6 @@ class ExamplesBrowser extends \Cherrycake\Module {
     function home() {
         global $e;
 
-		echo $e->Login->encryptPassword("137");
-		die;
-
 		$e->Output->setResponse(new \Cherrycake\Response([
             "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,
             "url" => $e->Actions->getAction("examplesBrowserView")->request->buildUrl([
