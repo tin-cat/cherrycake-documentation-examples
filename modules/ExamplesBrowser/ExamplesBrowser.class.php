@@ -16,7 +16,8 @@ class ExamplesBrowser extends \Cherrycake\Module {
 	protected $dependentCoreModules = [
 		"Errors",
         "HtmlDocument",
-		"SystemLog"
+		"SystemLog",
+		"Login"
     ];
 
 	function init() {
@@ -69,6 +70,9 @@ class ExamplesBrowser extends \Cherrycake\Module {
 
     function home() {
         global $e;
+
+		echo $e->Login->encryptPassword("137");
+		die;
 
 		$e->Output->setResponse(new \Cherrycake\Response([
             "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,

@@ -17,11 +17,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`id`, `name`, `email`, `passwordHash`) VALUES
-(1, 'Douglas Engelbart', 'doug@berkeley.edu', ''),
-(2, 'John Horton Conway', 'johnny@princeton.org', ''),
-(3, 'Frank Abagnale', 'frank.abagnale@united.com', ''),
-(4, 'Carl Sagan', 'carl@cosmos.org', ''),
-(5, 'Richard Feynmann', 'ricky@mit.edu', '');
+(1, 'Douglas Engelbart', 'doug@berkeley.edu', 'sha512:100000:+IWHhrngEBLl0BMu+19sZZLFBKnT99O1:Pm7SsGpfs/2Oghd4vrKPhOrzqR7lbYAW'), /* TheMotherOfAllDemos413 */
+(2, 'John Horton Conway', 'johnny@princeton.org', 'sha512:100000:VXJhDy/XW/sarOJZXpAt6Gk5GIKP/Wmv:jcKVOHjJwH5MTyTKvITzhI+L/5YAShaa'), /* lavidaloca */
+(3, 'Frank Abagnale', 'frank.abagnale@united.com', 'sha512:100000:dkzRTBp/el2mFpnZcYqp/J3A1GpQu2Ni:/7r9u96lWW4F9LXfNDxfKoxarlyUvtXQ'), /* catch_me_?_you_can */
+(4, 'Carl Sagan', 'carl@cosmos.org', 'sha512:100000:bnZnpmVgTD8Asd9x+JJxAHPlfcsCb4Fy:P4TzQV+/dtN+e/GlUZXAkXtrZ9esZy1Z'), /* palebluedot34 */
+(5, 'Richard Feynmann', 'ricky@mit.edu', 'sha512:100000:a2+OoczrhLgcGnuSUZDvi2axzY8MF08q:fnhKL87OZfnG+ZtwSjWuK9T2sYba48sq'); /* 137 */
 
 
 ALTER TABLE `users`
