@@ -17,7 +17,7 @@ class ExamplesBrowser extends \Cherrycake\Module {
 		"Errors",
         "HtmlDocument",
 		"SystemLog",
-		"Login"
+		"Locale"
     ];
 
 	function init() {

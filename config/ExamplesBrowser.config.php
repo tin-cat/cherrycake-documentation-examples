@@ -574,6 +574,51 @@ $ExamplesBrowserConfig = [
 					"actionName" => "loginGuideHome"
 				]
 			]
+		],
+		"localeGuideBasic" => [
+			"title" => "Locale basic examples",
+			"blocks" => [
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"lineHighlight" => "13-32,56-73"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "localeGuideBasic"
+				]
+			]
+		],
+		"localeGuideMultilingualTexts" => [
+			"title" => "Locale multilingual texts",
+			"blocks" => [
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"lineHighlight" => "34-53,96-107"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "localeGuideMultilingualTexts"
+				]
+			]
+		],
+		"localeGuideVariablesInMultilingualTexts" => [
+			"title" => "Locale variables in multilingual texts",
+			"blocks" => [
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"lineHighlight" => "55-74,109-130"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "localeGuideVariablesInMultilingualTexts"
+				]
+			]
 		]
 	]
 ];
