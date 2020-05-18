@@ -582,7 +582,7 @@ $ExamplesBrowserConfig = [
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
 					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
-					"lineHighlight" => "13-32,56-73"
+					"lineHighlight" => "13-32,77-94"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
