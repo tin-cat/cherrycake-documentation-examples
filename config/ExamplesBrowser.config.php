@@ -619,6 +619,21 @@ $ExamplesBrowserConfig = [
 					"actionName" => "localeGuideVariablesInMultilingualTexts"
 				]
 			]
+		],
+		"systemLogGuideLoadingEvents" => [
+			"title" => "Loading SystemLog events from the database",
+			"blocks" => [
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_FILE,
+					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+					"fileName" => "modules/SystemLogGuide/SystemLogGuide.class.php",
+					"lineHighlight" => "36-64"
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "systemLogGuideLoadingEvents"
+				]
+			]
 		]
 	]
 ];

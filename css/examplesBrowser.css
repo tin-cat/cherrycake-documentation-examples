@@ -106,6 +106,7 @@ select.mainMenu:focus {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	text-align: left;
+	white-space: nowrap;
 }
 
 #example .cell.iframe > iframe {
