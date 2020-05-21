@@ -2,8 +2,6 @@
 
 namespace Cherrycake;
 
-global $e;
-
 $StatsConfig = [
-    "isQueueInCache" => !$e->isDevel()
+    "isQueueInCache" => false
 ];
