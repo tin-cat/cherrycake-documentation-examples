@@ -64,6 +64,10 @@ select.mainMenu {
 	color: transparent;
 }
 
+select.mainMenu option {
+	color: #000;
+}
+
 select.mainMenu:focus {
     outline: none;
 }

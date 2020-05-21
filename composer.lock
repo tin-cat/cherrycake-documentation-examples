@@ -171,12 +171,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tin-cat/cherrycake-engine.git",
-                "reference": "64323bf39787b5d7324081a8c0c52bdea8d041a2"
+                "reference": "02306fded0b6662dfea1a4b4fb08d7bfaf7a42cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tin-cat/cherrycake-engine/zipball/64323bf39787b5d7324081a8c0c52bdea8d041a2",
-                "reference": "64323bf39787b5d7324081a8c0c52bdea8d041a2",
+                "url": "https://api.github.com/repos/tin-cat/cherrycake-engine/zipball/02306fded0b6662dfea1a4b4fb08d7bfaf7a42cf",
+                "reference": "02306fded0b6662dfea1a4b4fb08d7bfaf7a42cf",
                 "shasum": ""
             },
             "require": {
@@ -207,7 +207,7 @@
                 "engine",
                 "framework"
             ],
-            "time": "2020-04-17T17:30:45+00:00"
+            "time": "2020-05-18T18:09:12+00:00"
         }
     ],
     "packages-dev": [],
@@ -219,5 +219,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

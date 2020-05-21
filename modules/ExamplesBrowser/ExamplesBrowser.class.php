@@ -69,8 +69,8 @@ class ExamplesBrowser extends \Cherrycake\Module {
     }
 
     function home() {
-        global $e;
-
+		global $e;
+		
 		$e->Output->setResponse(new \Cherrycake\Response([
             "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,
             "url" => $e->Actions->getAction("examplesBrowserView")->request->buildUrl([
