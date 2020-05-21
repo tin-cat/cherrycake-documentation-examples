@@ -123,7 +123,8 @@ select.mainMenu:focus {
 	border-radius: 5px 5px 4px 4px;
 }
 
-#example .cell.code > pre.content {
+#example .cell.code > .content,
+#example .cell.html > .content {
 	position: absolute;
 	top: calc(1em + 15px);	left: 0; right: 0; bottom: 0;
 	border-radius: 5px 5px 4px 4px;
@@ -131,7 +132,13 @@ select.mainMenu:focus {
 	font-size: 11px;
 }
 
+#example .cell.html > .content {
+	background: #fff;
+	font-size: 16px;
+}
+
 #example .cell.iframe { background: #ccc; border-color: #ccc; }
+#example .cell.html { background: rgb(182, 234, 142); border-color: rgb(182, 234, 142); }
 #example .cell.code.php { background: #37cfff; border-color: #37cfff; }
 #example .cell.code.html { background: rgb(255, 152, 68); border-color: rgb(255, 152, 68); }
 #example .cell.code.css { background: #fc4; border-color: #fc4; }

@@ -4,6 +4,7 @@ namespace CherrycakeApp;
 
 const EXAMPLESBROWSER_BLOCK_FILE = 0;
 const EXAMPLESBROWSER_BLOCK_IFRAME = 1;
+const EXAMPLESBROWSER_BLOCK_HTML = 2;
 
 const EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP = 0;
 const EXAMPLESBROWSER_BLOCK_FILE_TYPE_HTML = 1;
@@ -17,7 +18,8 @@ class ExamplesBrowser extends \Cherrycake\Module {
 		"Errors",
         "HtmlDocument",
 		"SystemLog",
-		"Locale"
+		"Locale",
+		"Stats"
     ];
 
 	function init() {
@@ -228,6 +230,11 @@ class ExamplesBrowser extends \Cherrycake\Module {
 				$cssClass = "iframe";
 				$content = "<iframe src=\"".$url."\"></iframe>";
 
+				break;
+			case EXAMPLESBROWSER_BLOCK_HTML:
+				$title = $block["title"];
+				$cssClass = "html";
+				$content = "<div class=\"content\">".$block["html"]."</div>";
 				break;
 		}
 		return

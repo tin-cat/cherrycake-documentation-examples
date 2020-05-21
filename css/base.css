@@ -43,3 +43,17 @@ u {
 	padding: 0 3px;
 	border-radius: 4px;
 }
+
+input.copypaste {
+	border: solid transparent 1px;
+	background: rgba(0, 0, 0, 0.05);
+	padding: 5px;
+	margin: 2px;
+}
+
+input.copypaste:focus {
+	border: solid rgba(0, 0, 0, 0.5) 1px;
+	border-radius: 5px;
+	outline: none;
+	background: rgba(0, 0, 0, 0.1);
+}

@@ -37,13 +37,8 @@ class SystemLogGuide extends \Cherrycake\Module {
         global $e;
 
 		$systemLogEvents = new \Cherrycake\SystemLogEvents([
-			"fillMethod" => "fromParameters",
 			"p" => [
-				"limit" => 50,
-				"orders" => [
-					"chronological" => "dateAdded desc"
-				],
-				"order" => ["chronological"]
+				"limit" => 50
 			]
 		]);
 

@@ -5,7 +5,8 @@ namespace CherrycakeApp;
 class LoginGuide extends \Cherrycake\Module {
     protected $dependentCoreModules = [
         "HtmlDocument",
-        "Login"
+        "Login",
+        "Stats"
     ];
 
     public static function mapActions() {
@@ -154,6 +155,8 @@ class LoginGuide extends \Cherrycake\Module {
             ]));
         }
         else {
+            $e->Stats->trigger(new StatsEventUserLogin(["userId" => $e->Login->user->id]));
+
             $e->Output->setResponse(new \Cherrycake\Response([
                 "code" => \Cherrycake\RESPONSE_REDIRECT_FOUND,
                 "url" => $e->Actions->getAction("loginGuideHome")->request->buildUrl()

@@ -570,8 +570,38 @@ $ExamplesBrowserConfig = [
 					"fileName" => "modules/LoginGuide/LoginGuide.class.php"
 				],
 				[
-					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
-					"actionName" => "loginGuideHome"
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+							"actionName" => "loginGuideHome"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_HTML,
+							"title" => "Example login credentials",
+							"html" => "
+								<ul>
+									<li><b>Email</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"doug@berkeley.edu\"></li>
+									<li><b>Password</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"TheMotherOfAllDemos413\"></li>
+								</ul>
+								<ul>
+									<li><b>Email</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"johnny@princeton.org\"></li>
+									<li><b>Password</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"lavidaloca\"></li>
+								</ul>
+								<ul>
+									<li><b>Email</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"frank.abagnale@united.com\"></li>
+									<li><b>Password</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"catch_me_?_you_can\"></li>
+								</ul>
+								<ul>
+									<li><b>Email</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"carl@cosmos.org\"></li>
+									<li><b>Password</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"palebluedot34\"></li>
+								</ul>
+								<ul>
+									<li><b>Email</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"ricky@mit.edu\"></li>
+									<li><b>Password</b> <input type=text class=\"copypaste\" readonly=\"true\" value=\"137\"></li>
+								</ul>
+							"
+						]
+					]
 				]
 			]
 		],
@@ -627,13 +657,67 @@ $ExamplesBrowserConfig = [
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
 					"fileName" => "modules/SystemLogGuide/SystemLogGuide.class.php",
-					"lineHighlight" => "36-64"
+					"lineHighlight" => "36-59"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
 					"actionName" => "systemLogGuideLoadingEvents"
 				]
 			]
-		]
+		],
+		"statsGuideTriggeringEvent" => [
+			"title" => "Triggering a Stats event",
+			"blocks" => [
+				[
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "classes/StatsEventStatsGuideTriggeringExample.class.php"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "modules/StatsGuide/StatsGuide.class.php",
+							"lineHighlight" => "57-82"
+						]
+					]
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "statsGuideTriggeringEvent"
+				]
+			]
+		],
+		"statsGuideAdditionalDimensions" => [
+			"title" => "Events with additional dimensions",
+			"blocks" => [
+				[
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "classes/StatsEventUserLogin.class.php"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "modules/LoginGuide/LoginGuide.class.php",
+							"lineHighlight" => "158"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "modules/StatsGuide/StatsGuide.class.php",
+							"lineHighlight" => "84-114"
+						]
+					]
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "statsGuideAdditionalDimensions"
+				]
+			]
+		],
 	]
 ];
