@@ -28,4 +28,7 @@ class Movie extends \Cherrycake\Item {
             "id" => $this->directorId
         ]);
     }
+
+    function updateImdbRating() {
+    }
 }
