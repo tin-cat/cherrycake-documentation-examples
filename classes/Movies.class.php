@@ -15,6 +15,7 @@ class Movies extends \Cherrycake\Items {
             ],
             "minYear" => ["default" => false],
             "maxYear" => ["default" => false],
+            "title" => ["default" => false],
             "orders" => ["addArrayKeysIfNotExist" => [
                 "released" => "movies.year asc",
                 "title" => "movies.title asc"
@@ -67,6 +68,18 @@ class Movies extends \Cherrycake\Items {
                     [
                         "type" => \Cherrycake\DATABASE_FIELD_TYPE_INTEGER,
                         "value" => $p["maxYear"]
+                    ]
+                ]
+            ];
+        }
+
+        if ($p["title"]) {
+            $p["wheres"][] = [
+                "sqlPart" => "movies.title like ?",
+                "values" => [
+                    [
+                        "type" => \Cherrycake\DATABASE_FIELD_TYPE_STRING,
+                        "value" => "%".$p["title"]."%"
                     ]
                 ]
             ];

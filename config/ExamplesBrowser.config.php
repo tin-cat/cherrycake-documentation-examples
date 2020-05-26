@@ -719,5 +719,46 @@ $ExamplesBrowserConfig = [
 				]
 			]
 		],
+		"movieSearch" => [
+			"title" => "Movies search",
+			"blocks" => [
+				[
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "modules/MovieSearch/MovieSearch.class.php"
+						],
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "classes/Movies.class.php"
+						]
+					]
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "movieSearchForm"
+				]
+			]
+		],
+		"movieSearchLog" => [
+			"title" => "Movies search log",
+			"blocks" => [
+				[
+					"verticalBlocks" => [
+						[
+							"type" => EXAMPLESBROWSER_BLOCK_FILE,
+							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
+							"fileName" => "modules/MovieSearchLog/MovieSearchLog.class.php"
+						]
+					]
+				],
+				[
+					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
+					"actionName" => "movieSearchLog"
+				]
+			]
+		]
 	]
 ];
