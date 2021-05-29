@@ -8,6 +8,7 @@ class ComposerStaticInitd810cb79567af08807546a9be9235a99
 {
     public static $files = array (
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        'b2611bb5a07c2d8476d7d289addbcccd' => __DIR__ . '/..' . '/tin-cat/cherrycake-engine/load.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -15,6 +16,15 @@ class ComposerStaticInitd810cb79567af08807546a9be9235a99
         array (
             'Predis\\' => 7,
             'PHPMailer\\PHPMailer\\' => 20,
+        ),
+        'G' => 
+        array (
+            'GraphQL\\' => 8,
+        ),
+        'C' => 
+        array (
+            'Cherrycake\\' => 11,
+            'CherrycakeApp\\' => 14,
         ),
     );
 
@@ -26,6 +36,18 @@ class ComposerStaticInitd810cb79567af08807546a9be9235a99
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'GraphQL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webonyx/graphql-php/src',
+        ),
+        'Cherrycake\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tin-cat/cherrycake-engine/src',
+        ),
+        'CherrycakeApp\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
@@ -39,12 +61,17 @@ class ComposerStaticInitd810cb79567af08807546a9be9235a99
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd810cb79567af08807546a9be9235a99::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd810cb79567af08807546a9be9235a99::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitd810cb79567af08807546a9be9235a99::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd810cb79567af08807546a9be9235a99::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -12,7 +12,7 @@ namespace CherrycakeApp;
 chdir(dirname(__FILE__));
 
 // Include the cherrycake loader script
-require defined("STDIN") || $_SERVER["HTTP_HOST"] == "localhost" ? "/engine/load.php" : "../vendor/tin-cat/cherrycake-engine/load.php";
+require "../vendor/autoload.php";
 
 // Creates a cherrycake engine
 $e = new \Cherrycake\Engine;

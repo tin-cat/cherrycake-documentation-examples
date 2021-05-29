@@ -2,13 +2,16 @@
 
 namespace CherrycakeApp;
 
-require $_SERVER["HTTP_HOST"] == "localhost" ? "/engine/load.php" : "../vendor/tin-cat/cherrycake-engine/load.php";
+require "../vendor/autoload.php";
 
 $e = new \Cherrycake\Engine;
 
 if ($e->init(__NAMESPACE__, [
-    "isDevel" => $_SERVER["HTTP_HOST"] == "localhost"
+	"isDevel" => true,
+	"additionalAppConfigFiles" => [
+		"App.config.php"
+	]
 ]))
-    $e->attendWebRequest();
+	$e->attendWebRequest();
 
 $e->end();

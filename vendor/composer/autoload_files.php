@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '2cffec82183ee1cea088009cef9a6fc3' => $vendorDir . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+    'b2611bb5a07c2d8476d7d289addbcccd' => $vendorDir . '/tin-cat/cherrycake-engine/load.php',
 );

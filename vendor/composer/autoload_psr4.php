@@ -8,4 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Predis\\' => array($vendorDir . '/predis/predis/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'GraphQL\\' => array($vendorDir . '/webonyx/graphql-php/src'),
+    'Cherrycake\\' => array($vendorDir . '/tin-cat/cherrycake-engine/src'),
+    'CherrycakeApp\\' => array($baseDir . '/src'),
 );

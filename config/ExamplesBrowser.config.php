@@ -1,6 +1,6 @@
 <?php
 
-namespace CherrycakeApp;
+namespace CherrycakeApp\ExamplesBrowser;
 
 $ExamplesBrowserConfig = [
     "examples" => [
@@ -10,7 +10,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/HelloWorld/HelloWorld.class.php"
+					"fileName" => "src/HelloWorld/HelloWorld.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
@@ -24,7 +24,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ModulesGuide/ModulesGuide.class.php"
+					"fileName" => "src/ModulesGuide/ModulesGuide.php"
 				],
 				[
 					"verticalBlocks" => [
@@ -47,7 +47,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ActionsGuide/ActionsGuide.class.php",
+					"fileName" => "src/ActionsGuide/ActionsGuide.php",
 					"lineHighlight" => "9-37,94-100",
 				],
 				[
@@ -83,7 +83,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ActionsGuide/ActionsGuide.class.php",
+					"fileName" => "src/ActionsGuide/ActionsGuide.php",
 					"lineHighlight" => "39-67,102-108",
 				],
 				[
@@ -119,7 +119,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ActionsGuide/ActionsGuide.class.php",
+					"fileName" => "src/ActionsGuide/ActionsGuide.php",
 					"lineHighlight" => "69-90,110-116",
 				],
 				[
@@ -134,7 +134,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/PatternsGuide/PatternsGuide.class.php",
+					"fileName" => "src/PatternsGuide/PatternsGuide.php",
 					"lineHighlight" => "13-32,77-84",
 				],
 				[
@@ -158,7 +158,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/PatternsGuide/PatternsGuide.class.php",
+					"fileName" => "src/PatternsGuide/PatternsGuide.php",
 					"lineHighlight" => "34-53,86-93",
 				],
 				[
@@ -192,7 +192,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/PatternsGuide/PatternsGuide.class.php",
+					"fileName" => "src/PatternsGuide/PatternsGuide.php",
 					"lineHighlight" => "55-75,95-98",
 				],
 				[
@@ -216,7 +216,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/DatabaseGuide/DatabaseGuide.class.php",
+					"fileName" => "src/DatabaseGuide/DatabaseGuide.php",
 					"lineHighlight" => "13-32,56-70",
 				],
 				[
@@ -231,7 +231,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/DatabaseGuide/DatabaseGuide.class.php",
+					"fileName" => "src/DatabaseGuide/DatabaseGuide.php",
 					"lineHighlight" => "34-54,72-89",
 				],
 				[
@@ -246,13 +246,13 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "14-33,204-220",
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "classes/Movie.class.php"
+					"fileName" => "src/Movie.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
@@ -266,7 +266,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "35-54,222-237",
 				],
 				[
@@ -274,12 +274,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -295,7 +295,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "56-75,239-254",
 				],
 				[
@@ -303,12 +303,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -324,7 +324,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "77-96,256-271",
 				],
 				[
@@ -332,12 +332,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -362,7 +362,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "98-117,273-291",
 				],
 				[
@@ -370,12 +370,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -391,7 +391,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "119-138,293-311",
 				],
 				[
@@ -399,12 +399,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -420,7 +420,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "140-159,313-333",
 				],
 				[
@@ -428,12 +428,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -449,7 +449,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "161-180,335-354",
 				],
 				[
@@ -457,12 +457,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -471,12 +471,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Director.class.php"
+							"fileName" => "src/Director.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
 							"actionName" => "itemsGuideRelationships"
-						]		
+						]
 					]
 				]
 			]
@@ -487,7 +487,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/ItemsGuide/ItemsGuide.class.php",
+					"fileName" => "src/ItemsGuide/ItemsGuide.php",
 					"lineHighlight" => "182-201,356-380",
 				],
 				[
@@ -495,12 +495,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movie.class.php"
+							"fileName" => "src/Movie.php"
 						]
 					]
 				],
@@ -509,12 +509,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Director.class.php"
+							"fileName" => "src/Director.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
 							"actionName" => "itemsGuideFiltersWithRelationships"
-						]		
+						]
 					]
 				]
 			]
@@ -525,7 +525,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/CssAndJavascriptGuide/CssAndJavascriptGuide.class.php"
+					"fileName" => "src/CssAndJavascriptGuide/CssAndJavascriptGuide.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
@@ -553,7 +553,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/SessionGuide/SessionGuide.class.php"
+					"fileName" => "src/SessionGuide/SessionGuide.php"
 				],
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_IFRAME,
@@ -567,7 +567,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/LoginGuide/LoginGuide.class.php"
+					"fileName" => "src/LoginGuide/LoginGuide.php"
 				],
 				[
 					"verticalBlocks" => [
@@ -611,7 +611,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"fileName" => "src/LocaleGuide/LocaleGuide.php",
 					"lineHighlight" => "13-32,77-94"
 				],
 				[
@@ -626,7 +626,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"fileName" => "src/LocaleGuide/LocaleGuide.php",
 					"lineHighlight" => "34-53,96-107"
 				],
 				[
@@ -641,7 +641,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/LocaleGuide/LocaleGuide.class.php",
+					"fileName" => "src/LocaleGuide/LocaleGuide.php",
 					"lineHighlight" => "55-74,109-130"
 				],
 				[
@@ -656,7 +656,7 @@ $ExamplesBrowserConfig = [
 				[
 					"type" => EXAMPLESBROWSER_BLOCK_FILE,
 					"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-					"fileName" => "modules/SystemLogGuide/SystemLogGuide.class.php",
+					"fileName" => "src/SystemLogGuide/SystemLogGuide.php",
 					"lineHighlight" => "36-59"
 				],
 				[
@@ -673,12 +673,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/StatsEventStatsGuideTriggeringExample.class.php"
+							"fileName" => "src/StatsEventStatsGuideTriggeringExample.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "modules/StatsGuide/StatsGuide.class.php",
+							"fileName" => "src/StatsGuide/StatsGuide.php",
 							"lineHighlight" => "57-82"
 						]
 					]
@@ -697,18 +697,18 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/StatsEventUserLogin.class.php"
+							"fileName" => "src/StatsEventUserLogin.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "modules/LoginGuide/LoginGuide.class.php",
+							"fileName" => "src/LoginGuide/LoginGuide.php",
 							"lineHighlight" => "158"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "modules/StatsGuide/StatsGuide.class.php",
+							"fileName" => "src/StatsGuide/StatsGuide.php",
 							"lineHighlight" => "84-114"
 						]
 					]
@@ -727,12 +727,12 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "modules/MovieSearch/MovieSearch.class.php"
+							"fileName" => "src/MovieSearch/MovieSearch.php"
 						],
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "classes/Movies.class.php"
+							"fileName" => "src/Movies.php"
 						]
 					]
 				],
@@ -750,7 +750,7 @@ $ExamplesBrowserConfig = [
 						[
 							"type" => EXAMPLESBROWSER_BLOCK_FILE,
 							"fileType" => EXAMPLESBROWSER_BLOCK_FILE_TYPE_PHP,
-							"fileName" => "modules/MovieSearchLog/MovieSearchLog.class.php"
+							"fileName" => "src/MovieSearchLog/MovieSearchLog.php"
 						]
 					]
 				],
