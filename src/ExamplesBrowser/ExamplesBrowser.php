@@ -148,7 +148,7 @@ class ExamplesBrowser extends \Cherrycake\Module {
 					"<select onchange=\"document.location=this.value;\" class=\"mainMenu\">".$selectOptions."</select>".
 					"<a class=\"logo\" href=\"https://cherrycake.io\"></a>".
 					"<div class=\"text\">".
-						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake examples</a>".
+						"<a class=\"title\" href=\"https://cherrycake.io\">Cherrycake examples</a> version 1.x".
 						"<div class=\"subTitle\">".$p["title"]."</div>".
 					"</div>".
 				"</div>".
